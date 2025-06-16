@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
 
-                            Padding( // Добавляем Padding здесь
+                            Padding(
                               padding: const EdgeInsets.only(bottom: 50),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10.0),
@@ -160,7 +160,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         bottom: 0.0,
                                         right: 0.0,
                                         child: const Icon(
-                                          Icons.info_outline, // Или Icons.info
+                                          Icons.info_outline,
                                           size: 40,
                                           color: Color(0xfff9d2ae),
                                         ),
