@@ -130,24 +130,43 @@ class _MyHomePageState extends State<MyHomePage> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
 
-                            Padding(
+                            Padding( // Добавляем Padding здесь
                               padding: const EdgeInsets.only(bottom: 50),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10.0),
                                 child: SizedBox(
                                   width: 300,
                                   height: 115,
-                                  child: ColoredBox(
-                                    color: Color(0xfffff2d9),
-                                    child: Center(
-                                      child: Text(
-                                        "Клиника прислала документ после приёма.\nЧтобы добавить его в медкарту и\nпосмотреть содержание, нужно будет\nуказать дату рождения пациента.\nЭто проверка для безопасности данных.",
-                                        style: TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w300,
+                                  child: Stack(
+                                    children: [
+
+                                      ColoredBox(
+                                        color: const Color(0xfffff2d9),
+                                        child: Center(
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text(
+                                              "Клиника прислала документ после приёма.\nЧтобы добавить его в медкарту и\nпосмотреть содержание, нужно будет\nуказать дату рождения пациента. Это\nпроверка для безопасности данных.",
+                                              style: const TextStyle(
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w300,
+                                              ),
+                                            ),
+                                          ),
                                         ),
                                       ),
-                                    ),
+
+                                      Positioned(
+                                        bottom: 0.0,
+                                        right: 0.0,
+                                        child: const Icon(
+                                          Icons.info_outline, // Или Icons.info
+                                          size: 40,
+                                          color: Color(0xfff9d2ae),
+                                        ),
+                                      ),
+
+                                    ],
                                   ),
                                 ),
                               ),
